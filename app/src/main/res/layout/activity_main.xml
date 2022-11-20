@@ -33,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
-                    android:text="Hi, Retard"
+                    android:text="Hi, Richard"
                     android:textColor="#dd3d00"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -292,9 +292,9 @@
                         android:layout_height="0dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:tint="#000000"
                         app:srcCompat="@drawable/btn2"
-                        tools:ignore="ContentDescription,DuplicateIds" />
+                        tools:ignore="ContentDescription,DuplicateIds"
+                        app:tint="#000000" />
 
                     <TextView
                         android:id="@+id/textView11"
@@ -322,9 +322,9 @@
                         android:layout_height="0dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:tint="@color/black"
                         app:srcCompat="@drawable/btn3"
-                        tools:ignore="DuplicateIds" />
+                        tools:ignore="DuplicateIds"
+                        app:tint="@color/black" />
 
                     <TextView
                         android:id="@+id/textView11"
@@ -353,9 +353,9 @@
                         android:layout_height="0dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:tint="@color/black"
                         app:srcCompat="@drawable/btn4"
-                        tools:ignore="DuplicateIds" />
+                        tools:ignore="DuplicateIds"
+                        app:tint="@color/black" />
 
                     <TextView
                         android:id="@+id/textView11"

@@ -1,17 +1,16 @@
 package com.example.restqr.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.example.restqr.Domain.FoodDomain;
 import com.example.restqr.Helper.ManagementCart;
-
+import com.example.restqr.R;
 
 public class ShowDetailActivity extends AppCompatActivity {
     private TextView addToCartBtn;

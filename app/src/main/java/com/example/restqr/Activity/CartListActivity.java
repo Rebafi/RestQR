@@ -1,9 +1,5 @@
 package com.example.restqr.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,10 +7,15 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.restqr.Adaptor.CartListAdapter;
 import com.example.restqr.Helper.ManagementCart;
 import com.example.restqr.Interface.ChangeQuantityListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.example.restqr.R;
 
 public class CartListActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;

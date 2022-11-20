@@ -15,6 +15,7 @@ import com.example.restqr.Activity.CartListActivity;
 import com.example.restqr.Domain.FoodDomain;
 import com.example.restqr.Helper.ManagementCart;
 import com.example.restqr.Interface.ChangeQuantityListener;
+import com.example.restqr.R;
 
 import java.util.ArrayList;
 
@@ -91,7 +92,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
         pricePerPiece=itemView.findViewById(R.id.pricePerPiece);
         pic=itemView.findViewById(R.id.pic);
         totalPrice=itemView.findViewById(R.id.totalPrice);
-        num=itemView.findViewById(R.id.num);
+        num=itemView.findViewById(R.id.numberItemTxt);  // R.id.num
         plusItem=itemView.findViewById(R.id.plusCartBtn);
         minusItem=itemView.findViewById(R.id.minusCartBtn);
     }

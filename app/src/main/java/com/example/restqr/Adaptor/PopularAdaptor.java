@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.restqr.Activity.ShowDetailActivity;
 import com.example.restqr.Domain.FoodDomain;
-
+import com.example.restqr.R;
 
 import java.util.ArrayList;
 
