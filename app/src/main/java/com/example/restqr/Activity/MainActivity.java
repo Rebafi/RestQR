@@ -19,7 +19,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private RecyclerView recyclerViewCategoryList;
+    private RecyclerView.Adapter adapter, adapter2;
+    private RecyclerView recyclerViewCategoryList, recyclerViewPopularList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewPopular();
         bottomNavigation();
     }
+
     private void bottomNavigation(){
         FloatingActionButton floatingActionButton = findViewById(R.id.cartBtn);
         LinearLayout homeBtn = findViewById(R.id.homeBtn);
@@ -47,12 +49,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     private void recyclerViewCategory() {
-        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        recyclerViewCategoryList=findViewById(R.id.recyclerView);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewCategoryList = findViewById(R.id.recyclerView);
         recyclerViewCategoryList.setLayoutManager(linearLayoutManager);
 
-        ArrayList<CategoryDomain> category=new ArrayList<>();
+        ArrayList<CategoryDomain> category = new ArrayList<>();
         category.add(new CategoryDomain("Pizza", "cat_1"));
         category.add(new CategoryDomain("Burger", "cat_2"));
         category.add(new CategoryDomain("HotDog", "cat_3"));
@@ -62,18 +65,18 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView.Adapter adapter = new CategoryAdaptor(category);
         recyclerViewCategoryList.setAdapter(adapter);
     }
+
     private void recyclerViewPopular(){
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        RecyclerView recyclerViewPopularList = findViewById(R.id.recyclerView2);
-        recyclerViewCategoryList.setLayoutManager(linearLayoutManager);
+        recyclerViewPopularList = findViewById(R.id.recyclerView2);
+        recyclerViewPopularList.setLayoutManager(linearLayoutManager);
 
-        ArrayList<FoodDomain> foodList=new ArrayList<>();
-        foodList.add(new FoodDomain("pepperoni pizza", "pizza1", "spicy salami made from cured pork and beef seasoned with paprika or other chili pepper. soft, slightly smoky, and bright red.", 9.99));
-        foodList.add(new FoodDomain("cheese burger", "burger", "hamburger topped with cheese.", 7.99));
-        foodList.add(new FoodDomain("vegetable pizza", "pizza2", "roasted red peppers, baby spinach, onions, mushrooms, tomatoes, and black olives. three kinds of cheese — feta, provolone, and mozzarella", 3.99));
+        ArrayList<FoodDomain> foodList = new ArrayList<>();
+        foodList.add(new FoodDomain("Pepperoni pizza", "pizza1", "spicy salami made from cured pork and beef seasoned with paprika or other chili pepper. soft, slightly smoky, and bright red.", 9.99));
+        foodList.add(new FoodDomain("Cheese Burger", "burger", "hamburger topped with cheese.", 7.99));
+        foodList.add(new FoodDomain("Vegetable pizza", "pizza2", "roasted red peppers, baby spinach, onions, mushrooms, tomatoes, and black olives. three kinds of cheese — feta, provolone, and mozzarella", 3.99));
 
-        RecyclerView.Adapter adapter2 = new PopularAdaptor(foodList);
+        adapter2 = new PopularAdaptor(foodList);
         recyclerViewPopularList.setAdapter(adapter2);
-
     }
 }

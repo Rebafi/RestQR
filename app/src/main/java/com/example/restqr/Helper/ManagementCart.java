@@ -61,7 +61,7 @@ public class ManagementCart {
         ArrayList<FoodDomain> shoppingList = getListCart();
         double fee = 0;
         for(int i = 0; i < shoppingList.size(); i++){
-            fee += (shoppingList.get(i).getPrice() * shoppingList.get(i).getQuantity());
+            fee += (shoppingList.get(i).getFee() * shoppingList.get(i).getQuantity());
         }
         return fee;
     }

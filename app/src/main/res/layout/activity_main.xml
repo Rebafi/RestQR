@@ -33,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
-                    android:text="Hi, Retard"
+                    android:text="Hi, Vladimir"
                     android:textColor="#dd3d00"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -136,7 +136,7 @@
                         android:id="@+id/textView5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="May 2 - June 10"
+                        android:text="  November 21 —\n— December 1"
                         android:textColor="#000000"
                         android:textSize="18sp"
                         android:textStyle="normal"
@@ -270,7 +270,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="home"
+                        android:text="Home"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="14sp"
@@ -292,16 +292,16 @@
                         android:layout_height="0dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:tint="#000000"
                         app:srcCompat="@drawable/btn2"
-                        tools:ignore="ContentDescription,DuplicateIds" />
+                        tools:ignore="ContentDescription,DuplicateIds"
+                        app:tint="#000000" />
 
                     <TextView
                         android:id="@+id/textView11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="profile"
+                        android:text="Profile"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="14sp"
@@ -322,16 +322,16 @@
                         android:layout_height="0dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:tint="@color/black"
                         app:srcCompat="@drawable/btn3"
-                        tools:ignore="DuplicateIds" />
+                        tools:ignore="DuplicateIds"
+                        app:tint="@color/black" />
 
                     <TextView
                         android:id="@+id/textView11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="support"
+                        android:text="Support"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="14sp"
@@ -353,16 +353,16 @@
                         android:layout_height="0dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:tint="@color/black"
                         app:srcCompat="@drawable/btn4"
-                        tools:ignore="DuplicateIds" />
+                        tools:ignore="DuplicateIds"
+                        app:tint="@color/black" />
 
                     <TextView
                         android:id="@+id/textView11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="settings"
+                        android:text="Settings"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="14sp"

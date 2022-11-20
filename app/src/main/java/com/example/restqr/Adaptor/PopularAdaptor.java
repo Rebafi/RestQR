@@ -10,13 +10,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.restqr.Activity.ShowDetailActivity;
 import com.example.restqr.Domain.FoodDomain;
-
+import com.example.restqr.R;
 
 import java.util.ArrayList;
 
@@ -30,16 +29,16 @@ public class PopularAdaptor extends RecyclerView.Adapter<PopularAdaptor.ViewHold
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate= LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_popular, parent, false);
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_popular, parent, false);
         return new ViewHolder(inflate);
     }
 
     @Override
     public void onBindViewHolder(@NonNull PopularAdaptor.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.title.setText(popularFood.get(position).getTitle());
-        holder.fee.setText(String.valueOf(popularFood.get(position).getPrice()));
+        holder.fee.setText(String.valueOf(popularFood.get(position).getFee()));
 
-        int drawableResourceId=holder.itemView.getContext().getResources().getIdentifier(popularFood.get(position).getPic(), "drawable", holder.itemView.getContext().getPackageName());
+        int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(popularFood.get(position).getPic(), "drawable", holder.itemView.getContext().getPackageName());
 
         Glide.with(holder.itemView.getContext())
                 .load(drawableResourceId)
@@ -60,7 +59,8 @@ public class PopularAdaptor extends RecyclerView.Adapter<PopularAdaptor.ViewHold
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView title, fee;
         ImageView pic;
-        ConstraintLayout addBtn;
+        // ConstraintLayout addBtn;
+        TextView addBtn;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -68,7 +68,6 @@ public class PopularAdaptor extends RecyclerView.Adapter<PopularAdaptor.ViewHold
             fee=itemView.findViewById(R.id.fee);
             pic=itemView.findViewById(R.id.pic);
             addBtn=itemView.findViewById(R.id.addBtn);
-
         }
     }
 }

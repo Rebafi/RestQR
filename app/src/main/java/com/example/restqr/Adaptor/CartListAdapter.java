@@ -15,6 +15,7 @@ import com.example.restqr.Activity.CartListActivity;
 import com.example.restqr.Domain.FoodDomain;
 import com.example.restqr.Helper.ManagementCart;
 import com.example.restqr.Interface.ChangeQuantityListener;
+import com.example.restqr.R;
 
 import java.util.ArrayList;
 
@@ -38,8 +39,8 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull CartListAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position){
         holder.title.setText(foodDomains.get(position).getTitle());
-        holder.pricePerPiece.setText(String.valueOf(foodDomains.get(position).getPrice()));
-        holder.totalPrice.setText(String.valueOf(Math.round((foodDomains.get(position).getQuantity() * foodDomains.get(position).getPrice()) * 100) / 100));
+        holder.pricePerPiece.setText(String.valueOf(foodDomains.get(position).getFee()));
+        holder.totalPrice.setText(String.valueOf(Math.round((foodDomains.get(position).getQuantity() * foodDomains.get(position).getFee()) * 100) / 100));
         holder.num.setText(String.valueOf(foodDomains.get(position).getQuantity()));
 
         int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(foodDomains.get(position).getPic(),
@@ -91,7 +92,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
         pricePerPiece=itemView.findViewById(R.id.pricePerPiece);
         pic=itemView.findViewById(R.id.pic);
         totalPrice=itemView.findViewById(R.id.totalPrice);
-        num=itemView.findViewById(R.id.num);
+        num=itemView.findViewById(R.id.numberItemTxt);  // R.id.num
         plusItem=itemView.findViewById(R.id.plusCartBtn);
         minusItem=itemView.findViewById(R.id.minusCartBtn);
     }
