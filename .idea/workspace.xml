@@ -14,18 +14,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9377233b-ab10-4ccb-ae68-bd0cda28681e" name="Default Changelist" comment="4 12 am">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/add_dishoftheday.xml" afterDir="false" />
+    <list default="true" id="9377233b-ab10-4ccb-ae68-bd0cda28681e" name="Default Changelist" comment="Pretty version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/restqr/Activity/CartListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/restqr/Activity/CartListActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/restqr/Activity/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/restqr/Activity/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/restqr/Helper/ManagementCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/restqr/Helper/ManagementCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cart_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cart_list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_show_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_show_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_popular.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_popular.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668975810994</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Pretty version">
+      <created>1669037080201</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669037080201</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -238,6 +235,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="4 12 am" />
-    <option name="LAST_COMMIT_MESSAGE" value="4 12 am" />
+    <MESSAGE value="Pretty version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pretty version" />
   </component>
 </project>
