@@ -194,7 +194,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:gravity="center"
-                android:text="my cart"
+                android:text="My cart"
                 android:textAlignment="center"
                 android:textColor="#ff3d00"
                 android:textSize="24sp"
@@ -219,7 +219,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="items total:"
+                    android:text="Items Total:"
                     android:textColor="#373b54"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -248,7 +248,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="delivery services:"
+                    android:text="Delivery Services:"
                     android:textColor="#373b54"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -279,7 +279,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="tax:"
+                    android:text="Tax:"
                     android:textColor="#373b54"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -310,7 +310,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="total:"
+                    android:text="Total:"
                     android:textColor="#373b54"
                     android:textSize="30sp"
                     android:textStyle="bold"
@@ -332,10 +332,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_margin="16dp"
-                android:background="@drawable/orange_light_banner"
+                android:background="@drawable/add_dishoftheday"
                 android:gravity="center"
-                android:text="c h e c k o u t"
-                android:textColor="#86002D"
+                android:text="Checkout"
+                android:textColor="#ffffff"
                 android:textSize="30sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -353,15 +353,5 @@
         app:layout_constraintEnd_toEndOf="@+id/scrollView3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/scrollView3" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="200dp"
-        android:layout_height="235dp"
-        android:layout_marginBottom="70dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/sadman" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         category.add(new CategoryDomain("Drink", "cat_4"));
         category.add(new CategoryDomain("Donut", "cat_5"));
 
-        RecyclerView.Adapter adapter = new CategoryAdaptor(category);
+        adapter = new CategoryAdaptor(category);
         recyclerViewCategoryList.setAdapter(adapter);
     }
 
@@ -72,9 +72,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewPopularList.setLayoutManager(linearLayoutManager);
 
         ArrayList<FoodDomain> foodList = new ArrayList<>();
-        foodList.add(new FoodDomain("Pepperoni pizza", "pizza1", "spicy salami made from cured pork and beef seasoned with paprika or other chili pepper. soft, slightly smoky, and bright red.", 9.99));
-        foodList.add(new FoodDomain("Cheese Burger", "burger", "hamburger topped with cheese.", 7.99));
-        foodList.add(new FoodDomain("Vegetable pizza", "pizza2", "roasted red peppers, baby spinach, onions, mushrooms, tomatoes, and black olives. three kinds of cheese — feta, provolone, and mozzarella", 3.99));
+        foodList.add(new FoodDomain("Pepperoni pizza", "pop_1", "Spicy salami made from cured pork and beef seasoned with paprika or other chili pepper. soft, slightly smoky, and bright red", 9.99));
+        foodList.add(new FoodDomain("Cheese Burger", "pop_2", "Hamburger topped with cheese", 7.99));
+        foodList.add(new FoodDomain("Vegetable pizza", "pop_3", "Roasted red peppers, baby spinach, onions, mushrooms, tomatoes, and black olives. three kinds of cheese — feta, provolone, and mozzarella", 3.99));
 
         adapter2 = new PopularAdaptor(foodList);
         recyclerViewPopularList.setAdapter(adapter2);
