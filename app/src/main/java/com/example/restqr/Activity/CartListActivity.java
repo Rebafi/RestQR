@@ -8,20 +8,17 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.restqr.Adaptor.CartListAdapter;
 import com.example.restqr.Helper.ManagementCart;
-import com.example.restqr.Interface.ChangeQuantityListener;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.example.restqr.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class CartListActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
-    private RecyclerView recyclerViewList;
+    private RecyclerView recyclerViewCartList;
     private ManagementCart managementCart;
-    TextView  totalFeeTxt, deliveryTxt, taxTxt, totalTxt, emptyTxt;
+    TextView totalFeeTxt, tipsTxt, taxTxt, totalTxt, emptyTxt;
     private double tax;
     private ScrollView scrollView;
 
@@ -32,21 +29,14 @@ public class CartListActivity extends AppCompatActivity {
 
         managementCart = new ManagementCart(this);
         initView();
-        initList();
+        // initList();
         CalculateCart();
         bottomNavigation();
     }
 
-    private void bottomNavigation(){
-        FloatingActionButton floatingActionButton = findViewById(R.id.cartBtn);
-        LinearLayout homeBtn = findViewById(R.id.homeBtn);
-
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(CartListActivity.this, CartListActivity.class));
-            }
-        });
+    private void bottomNavigation() {
+        FloatingActionButton floatingActionButton = findViewById(R.id.cartBtn2);
+        LinearLayout homeBtn = findViewById(R.id.homeBtn2);
 
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,41 +44,57 @@ public class CartListActivity extends AppCompatActivity {
                 startActivity(new Intent(CartListActivity.this, MainActivity.class));
             }
         });
-    }
 
-    private void initView(){
-        recyclerViewList=findViewById(R.id.recyclerView);
-        totalFeeTxt=findViewById(R.id.totalFeeTxt);
-        deliveryTxt=findViewById(R.id.deliveryTxt);
-        taxTxt=findViewById(R.id.taxTxt);
-        totalTxt=findViewById(R.id.totalTxt);
-        emptyTxt=findViewById(R.id.emptyTxt);
-        scrollView=findViewById(R.id.scrollView3);
-        recyclerViewList=findViewById(R.id.cartView);
-    }
-
-    private  void initList(){
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false);
-        recyclerViewList.setLayoutManager(linearLayoutManager);
-        adapter = new CartListAdapter(managementCart.getListCart(), this, new ChangeQuantityListener() {
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void changed(){
-                CalculateCart();
+            public void onClick(View view) {
+                startActivity(new Intent(CartListActivity.this, CartListActivity.class));
             }
         });
     }
 
+
+
+    private void initView() {
+        recyclerViewCartList=findViewById(R.id.cartView);  // MAYBE ERROR
+        totalFeeTxt=findViewById(R.id.totalFeeTxt);
+        tipsTxt =findViewById(R.id.tipsTxt);
+        taxTxt=findViewById(R.id.taxTxt);
+        totalTxt=findViewById(R.id.totalTxt);
+        emptyTxt=findViewById(R.id.emptyTxt);
+        scrollView=findViewById(R.id.scrollView3);
+    }
+
+
+
+    // @ToDo THIS !!!
+    /*
+    private void initList(){
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        recyclerViewCartList.setLayoutManager(linearLayoutManager);
+        adapter = new CartListAdapter(managementCart.getListCart(), this, new ChangeQuantityListener() {
+            @Override
+            public void changed() {  }  // CalculateCart();
+        });
+    }
+     */
+
+
+
+
     private void CalculateCart(){
         double percentTax = 0.02;
-        double delivery = 10;
 
-        tax= Math.round((managementCart.getTotalPrice() * percentTax) * 100) / 100;
-        double itemsCost = Math.round(managementCart.getTotalPrice() * 100) / 100;
-        double overallCost = Math.round((managementCart.getTotalPrice() + tax + delivery) * 100) / 100;
+        tax = Math.round(managementCart.getTotalPrice() * percentTax);
+
+        // @ToDo Fix long double values
+        double itemsCost = Math.round(managementCart.getTotalPrice());
+        double tips = Math.round(itemsCost * 0.1);
+        double overallCost = itemsCost + tax + tips;  // managementCart.getTotalPrice() + tax + tips
 
         totalFeeTxt.setText("$"+ itemsCost);
         taxTxt.setText("$"+ tax);
-        deliveryTxt.setText("$"+ delivery);
+        tipsTxt.setText("$"+ tips);
         totalTxt.setText("$" + overallCost);
     }
 }

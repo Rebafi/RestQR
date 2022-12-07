@@ -29,7 +29,7 @@
                 android:baselineAligned="false">
 
                 <LinearLayout
-                    android:id="@+id/homeBtn"
+                    android:id="@+id/homeBtn2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="0dp"
@@ -55,7 +55,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="home"
+                        android:text="Home"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="14sp"
@@ -86,7 +86,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="profile"
+                        android:text="Profile"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="14sp"
@@ -116,7 +116,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="support"
+                        android:text="Support"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="14sp"
@@ -147,7 +147,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="settings"
+                        android:text="Settings"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="14sp"
@@ -159,7 +159,7 @@
         </com.google.android.material.bottomappbar.BottomAppBar>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/cartBtn"
+            android:id="@+id/cartBtn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#ff5e00"
@@ -168,7 +168,7 @@
             app:backgroundTint="#ff5e00"
             app:layout_anchor="@id/app_bar"
             app:maxImageSize="42dp"
-            app:tint="#FFCC00"
+            app:tint="#920000"
             tools:ignore="SpeakableTextPresentCheck">
 
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
@@ -203,7 +203,9 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/cartView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -248,14 +250,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Delivery Services:"
+                    android:text="Tips:"
                     android:textColor="#373b54"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     tools:ignore="DuplicateIds" />
 
                 <TextView
-                    android:id="@+id/deliveryTxt"
+                    android:id="@+id/tipsTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="$0"

@@ -1,5 +1,7 @@
 package com.example.restqr.Activity;
 
+import static com.example.restqr.R.id.recyclerView2;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, CartListActivity.class));
             }
         });
+
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void recyclerViewPopular(){
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        recyclerViewPopularList = findViewById(R.id.recyclerView2);
+        recyclerViewPopularList = findViewById(recyclerView2);
         recyclerViewPopularList.setLayoutManager(linearLayoutManager);
 
         ArrayList<FoodDomain> foodList = new ArrayList<>();

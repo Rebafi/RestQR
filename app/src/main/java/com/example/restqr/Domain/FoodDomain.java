@@ -7,7 +7,7 @@ public class FoodDomain implements Serializable {
     private String pic;
     private String description;
     private Double fee;
-    private int numberInCart;
+    private int quantity;
 
     public FoodDomain(String title, String pic, String description, Double price) {
         this.title = title;
@@ -16,12 +16,12 @@ public class FoodDomain implements Serializable {
         this.fee = price;
     }
 
-    public FoodDomain(String title, String pic, String description, Double price, int numberInCart) {
+    public FoodDomain(String title, String pic, String description, Double price, int quantity) {
         this.title = title;
         this.pic = pic;
         this.description = description;
         this.fee = price;
-        this.numberInCart = numberInCart;
+        this.quantity = quantity;
     }
 
     public String getTitle() {
@@ -57,10 +57,10 @@ public class FoodDomain implements Serializable {
     }
 
     public int getQuantity() {
-        return numberInCart;
+        return  quantity;
     }
 
-    public void setQuantity(int numberInCart) {
-        this.numberInCart = numberInCart;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }

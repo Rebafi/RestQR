@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -59,11 +60,12 @@ public class PopularAdaptor extends RecyclerView.Adapter<PopularAdaptor.ViewHold
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView title, fee;
         ImageView pic;
-        // ConstraintLayout addBtn;
+        ConstraintLayout Btn;
         TextView addBtn;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            Btn= itemView.findViewById(R.id.Btn);
             title=itemView.findViewById(R.id.title);
             fee=itemView.findViewById(R.id.fee);
             pic=itemView.findViewById(R.id.pic);

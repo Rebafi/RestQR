@@ -54,7 +54,7 @@ public class ShowDetailActivity extends AppCompatActivity {
         minusBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(quantity > 1) {
+                if(quantity > 0) {
                     quantity -= 1;
                 }
                 quantityTxt.setText(String.valueOf(quantity));

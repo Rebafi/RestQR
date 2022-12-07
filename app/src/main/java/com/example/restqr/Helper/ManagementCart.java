@@ -17,23 +17,23 @@ public class ManagementCart {
         this.tinyDB = new TinyDB(context);
     }
 
-    public void insertFood(FoodDomain item){
+    public void insertFood(FoodDomain item) {
         ArrayList<FoodDomain> shoppingList = getListCart();
         boolean existAlready = false;
         int n = 0;
-        for(int i = 0; i < shoppingList.size(); i++){
-            if(shoppingList.get(i).getTitle().equals(item.getTitle())){
+        for (int i = 0; i < shoppingList.size(); i++) {
+            if (shoppingList.get(i).getTitle().equals(item.getTitle())){
                 existAlready = true;
                 n = i;
                 break;
             }
         }
-        if(existAlready){
+        if (existAlready){
             shoppingList.get(n).setQuantity(item.getQuantity());
         } else {
             shoppingList.add(item);
         }
-        tinyDB.putListObject("CardList", shoppingList);
+        tinyDB.putListObject("CartList", shoppingList);
         Toast.makeText(context, "Added to Your Cart", Toast.LENGTH_SHORT).show();
     }
 
@@ -57,10 +57,10 @@ public class ManagementCart {
         changeQuantityListener.changed();
     }
 
-    public Double getTotalPrice(){
+    public Double getTotalPrice() {
         ArrayList<FoodDomain> shoppingList = getListCart();
         double fee = 0;
-        for(int i = 0; i < shoppingList.size(); i++){
+        for (int i = 0; i < shoppingList.size(); i++) {
             fee += (shoppingList.get(i).getFee() * shoppingList.get(i).getQuantity());
         }
         return fee;

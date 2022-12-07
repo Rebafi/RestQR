@@ -24,7 +24,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
     private ManagementCart managementCart;
     private ChangeQuantityListener changeQuantityListener;
 
-    public CartListAdapter(ArrayList<FoodDomain>foodDomains, CartListActivity context, ChangeQuantityListener changeQuantityListener){
+    public CartListAdapter(ArrayList<FoodDomain> foodDomains, CartListActivity context, ChangeQuantityListener changeQuantityListener){
         this.foodDomains = foodDomains;
         this.managementCart = new ManagementCart(context);
         this.changeQuantityListener = changeQuantityListener;
@@ -92,7 +92,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
         pricePerPiece=itemView.findViewById(R.id.pricePerPiece);
         pic=itemView.findViewById(R.id.pic);
         totalPrice=itemView.findViewById(R.id.totalPrice);
-        num=itemView.findViewById(R.id.numberItemTxt);  // R.id.num
+        num=itemView.findViewById(R.id.numberItemTxt);
         plusItem=itemView.findViewById(R.id.plusCartBtn);
         minusItem=itemView.findViewById(R.id.minusCartBtn);
     }

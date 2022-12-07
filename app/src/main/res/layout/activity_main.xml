@@ -33,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
-                    android:text="Hi, Nikita"
+                    android:text="Hi, Alex"
                     android:textColor="#dd3d00"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -209,6 +209,7 @@
                     android:paddingStart="22dp"
                     android:paddingEnd="22dp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView10" />
             </androidx.constraintlayout.widget.ConstraintLayout>
